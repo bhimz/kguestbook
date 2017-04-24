@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GuestBook</string>
+    <string name="action_reset">Clear all data</string>
+</resources>

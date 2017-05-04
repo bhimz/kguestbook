@@ -12,9 +12,9 @@ import android.view.MenuItem
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
+import id.co.ruma.guestbook.data.Guest
 import io.realm.OrderedRealmCollection
 import io.realm.Realm
-import io.realm.RealmObject
 import io.realm.RealmRecyclerViewAdapter
 import org.androidannotations.annotations.*
 import javax.inject.Inject
@@ -92,15 +92,5 @@ open class MainActivity : AppCompatActivity() {
     class GuestViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var mNameView: TextView = view.findViewById(R.id.name) as TextView
         var mDivisionView: TextView = view.findViewById(R.id.division) as TextView
-    }
-}
-
-open class Guest() : RealmObject() {
-    var name: String? = null
-    var division: String? = null
-
-    constructor(name: String, division: String) : this() {
-        this.name = name
-        this.division = division
     }
 }
